@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Практическое задание 7</title>
+        <link rel="stylesheet" href="common.css">
+    </head>
+
+    <body>
+        <img id="figure-img" src="figure-by-diagonals.png" alt="Схема ромба">
+
+        <form id="figure-form">
+            <fieldset>
+                <legend><strong>Тип входных данных</strong></legend>
+                <label>
+                    <input type="radio" name="inputType" value="diagonals" checked="true">
+                    Диагонали
+                </label>
+
+                <label>
+                    <input type="radio" name="inputType" value="side-n-angle">
+                    Сторона и угол
+                </label>
+
+                <button type="button" id="show-button">Показать</button>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Входные данные</strong></legend>
+                <div id="diagonals">
+                    <label>
+                        Диагональ d1:
+                        <input type="number" name="d1">
+                    </label>
+
+                    <label>
+                        Диагональ d2:
+                        <input type="number" name="d2">
+                    </label>
+                </div>
+
+                <div id="side-n-angle">
+                    <label>
+                        Сторона a:
+                        <input type="number" name="side">
+                    </label>
+
+                    <label>
+                        Угол α:
+                        <input type="number" name="alpha">
+                    </label>
+                </div>
+
+                <div id="error" class="error-text"></div>
+            </fieldset>
+
+            <fieldset id="results-checkbox">
+                <legend><strong>Вычисляемые характеристики</strong></legend>
+                <label>
+                    <input type="checkbox" name="radius">
+                    Радиус вписанной окружности
+                </label>
+                <label>
+                    <input type="checkbox" name="height">
+                    Высота
+                </label>
+                <label>
+                    <input type="checkbox" name="perimeter">
+                    Периметр
+                </label>
+            </fieldset>
+
+            <button type="button" id="calculate-button">Вычислить</button>
+            <button type="reset" id="clear-button">Очистить</button>
+        </form>
+
+        <div id="results"></div>
+    </body>
+    <script src="program.js"></script>
+</html>
