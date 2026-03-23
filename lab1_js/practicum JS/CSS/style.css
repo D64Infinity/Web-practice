@@ -1,0 +1,30 @@
+#list {
+    margin-top: 3vh;
+}
+
+#list th {
+    font-weight: bold;
+    background-color: lightgray;
+    width: 16vw;
+}
+
+#list tbody {
+    background-color: aliceblue;
+}
+
+#filter {
+    display: inline-block;
+    margin-right: 3vw;
+}
+
+#sort {
+    display: inline-block;
+    margin-left: 3vw;
+    padding: 1vw;
+    border: 1px solid grey;
+}
+
+#sort h3 {
+    text-align: center;
+    margin-top: 0;
+}
