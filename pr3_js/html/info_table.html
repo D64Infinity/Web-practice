@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Танки Победы
+    </title>
+</head>
+
+<body vlink="blue" alink="green">
+    <h2 align="left">
+        Танки Победы
+    </h2>
+
+    <a href="main_page.html" title="Перейти к главной странице">
+        Основные танки СССР времён ВОВ
+    </a>
+    <p> </p>
+    <a href="info_table.html" title="Перейти к таблице с информацией">
+        Список танков СССР, произведённых и/или использовавшихся в годы ВОВ
+    </a>
+    <p> </p>
+    <hr>
+
+    <details>
+        <summary>График</summary>
+        <b>Ось X &emsp;</b> <b>Результат</b>
+
+        <br>
+        <label>
+            <input type="radio" name="rad" value="0" checked="true">
+            Тип &emsp; &nbsp;
+        </label>
+        <label> &emsp; &nbsp;&nbsp;
+            <input type="checkbox" name="chckbox" value="0" checked="true">
+            Макс. число экземпляров
+        </label>
+        <label> &emsp; &nbsp;&nbsp;
+            Тип диаграммы:
+            <select name="graphType">
+                <option value="dotted">Точечная диаграмма</option>
+                <option value="hist">Гистограмма</option>
+            </select>
+        </label>
+
+        <br>
+        <label>
+            <input type="radio" name="rad" value="1">
+            Масса &emsp;
+        </label>
+        <label> &emsp;&nbsp;
+            <input type="checkbox" name="chckbox" value="1">
+            Мин. число экземпляров
+        </label>
+
+        <br>
+        <label>
+            <input type="radio" name="rad" value="2">
+            Калибр &emsp;
+        </label>
+
+        <p> </p>
+        <svg></svg>
+        <input type="button" value="Построить">
+        <p> </p>
+    </details>
+
+    <details>
+        <summary>Фильтр</summary>
+
+        <form id="filterForm">
+            <label for="name"> Название: </label>
+            <input type="text" id="name">
+
+            <br><br>
+            <label for="type"> Тип: </label>
+            <input type="text" id="type">
+
+            <br><br>
+            <label> Масса:
+                от <input type="number" id="weightFrom">
+            </label>
+            <label>
+                до <input type="number" id="weightTo">
+            </label>
+
+            <br><br>
+            <label> Калибр:
+                от <input type="number" id="caliberFrom">
+            </label>
+            <label>
+                до <input type="number" id="caliberTo">
+            </label>
+
+            <br><br>
+            <label> Макс. скорость:
+                от <input type="number" id="speedFrom">
+            </label>
+            <label>
+                до <input type="number" id="speedTo">
+            </label>
+
+            <br><br>
+            <label> Число экземпляров:
+                от <input type="number" id="amountFrom">
+            </label>
+            <label>
+                до <input type="number" id="amountTo">
+            </label>
+
+            <p> </p>
+
+            <input type="button" value="Найти" id="filterButton">
+            <input type="button" value="Сбросить" id="resetFilterButton">
+            <p> </p>
+        </form>
+    </details>
+
+    <details>
+        <summary>Сортировка</summary>
+
+        <form id="sortForm">
+            <label>
+                Первый уровень
+                <select id="fieldsFirst">
+                    <option value="0" selected> Нет </option>
+                    <option value="1"> Название </option>
+                    <option value="2"> Тип </option>
+                    <option value="3"> Масса </option>
+                    <option value="4"> Калибр </option>
+                    <option value="5"> Макс. скорость </option>
+                    <option value="6"> Число экземпляров </option>
+                </select>
+            </label>
+
+            <label>
+                по убыванию?
+                <input type="checkbox" id="fieldsFirstDesc" value="0">
+            </label>
+
+            <br>
+            <label>
+                Второй уровень
+                <select id="fieldsSecond">
+                    <option value="0" selected> Нет </option>
+                    <option value="1"> Название </option>
+                    <option value="2"> Тип </option>
+                    <option value="3"> Масса </option>
+                    <option value="4"> Калибр </option>
+                    <option value="5"> Макс. скорость </option>
+                    <option value="6"> Число экземпляров </option>
+                </select>
+            </label>
+
+            <label>
+                по убыванию?
+                <input type="checkbox" id="fieldsSecondDesc" value="0">
+            </label>
+
+            <br>
+            <label>
+                Третий уровень
+                <select id="fieldsThird">
+                    <option value="0" selected> Нет </option>
+                    <option value="1"> Название </option>
+                    <option value="2"> Тип </option>
+                    <option value="3"> Масса </option>
+                    <option value="4"> Калибр </option>
+                    <option value="5"> Макс. скорость </option>
+                    <option value="6"> Число экземпляров </option>
+                </select>
+            </label>
+
+            <label>
+                по убыванию?
+                <input type="checkbox" id="fieldsThirdDesc" value="0">
+            </label>
+
+            <p> </p>
+            <input type="button" value="Сортировать" id="sortButton">
+            <input type="button" value="Сбросить" id="resetSortButton">
+            <p> </p>
+        </form>
+    </details>
+
+    <p> </p>
+    <table border="1" cellspacing="0" id="tanksTable">
+    </table>
+</body>
+
+<script src="http://d3js.org/d3.v7.min.js"></script>
+<script src="../js/tanksData"></script>
+<script src="../js/table.js"></script>
+<script src="../js/diagram.js"></script>
+<script src="../js/main.js"></script>
+
+</html>
