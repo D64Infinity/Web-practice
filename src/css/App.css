@@ -30,3 +30,19 @@ span:hover {
 button {
   margin: auto 1vmax auto 0.3vmax;
 }
+
+
+svg {
+    width: 800px;
+    height: 400px;
+}
+
+svg path, line {
+    fill: none;
+    stroke: black;
+    width: 1px;
+}
+ 
+svg text {
+    font: 8px Verdana;
+}
