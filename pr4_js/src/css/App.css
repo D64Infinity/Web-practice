@@ -1,0 +1,32 @@
+th {
+  border: black solid thin;
+  padding: 0.5vmin;
+  background-color: rgb(201, 201, 201);
+}
+td, .show {
+  border: black solid thin;
+  padding: 0.5vmin;
+  font-weight: normal;
+}
+
+.hide {
+  display: none;
+}
+
+span {
+  margin: auto 1vmax auto 1vmax;
+}
+span.current {
+  color: blue;
+}
+span.not-current {
+  color: black;
+}
+span:hover {
+  color: red;
+  cursor: pointer;
+}
+
+button {
+  margin: auto 1vmax auto 0.3vmax;
+}
